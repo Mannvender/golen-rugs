@@ -3,8 +3,8 @@ import { Box, Flex, Heading } from "rebass";
 import { useTheme } from "styled-components";
 import dynamic from "next/dynamic";
 import { useFlags } from "@happykit/flags/client";
-import Button from 'components/Button'
-import * as Sentry from '@sentry/browser';
+import Button from "components/Button";
+import * as Sentry from "@sentry/nextjs";
 const MintSolana = dynamic(() => import("components/mint/MintSolana"), {
   ssr: false,
 });
@@ -13,16 +13,9 @@ const Mint = ({ date, dateOptions }) => {
   const { colors } = useTheme();
   const { flags } = useFlags();
 
-  const handleMintWaitClick = (e) => {
-    Sentry.configureScope(scope => {
-      scope.clear();
-      scope.setTag('mint_wait_click', 'clicked');
-    });
-
-    Sentry.captureEvent({
-      message: 'Mint wait button click',
-    });
-  }
+  const handleMintWaitClick = () => {
+    Sentry.captureMessage("Mint wait clicked");
+  };
   return (
     <Box
       marginTop={[5]}
@@ -55,8 +48,10 @@ const Mint = ({ date, dateOptions }) => {
         </Heading>
         {flags?.isMintingLive ? (
           <MintSolana date={date} dateOptions={dateOptions} />
-        ): (
-          <Button mt={[3]} onClick={handleMintWaitClick}>Mint on {flags?.launchDate}</Button>
+        ) : (
+          <Button mt={[3]} onClick={handleMintWaitClick}>
+            Mint on {flags?.launchDate}
+          </Button>
         )}
       </Flex>
     </Box>

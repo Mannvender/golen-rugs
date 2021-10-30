@@ -9,7 +9,6 @@ import { buttonCss } from "components/Button";
 import { WalletMultiButton as WalletMultiButtonBase } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-import * as Sentry from '@sentry/browser';
 import * as anchor from "@project-serum/anchor";
 import {
   getCandyMachineState,
@@ -64,19 +63,8 @@ const MintSection = ({ ethAddress }) => {
   const [amount, setAmount] = useState(8);
   const [candyMachine, setCandyMachine] = useState();
 
-  const generateSentryEvent = () => {
-    Sentry.configureScope(scope => {
-      scope.clear();
-      scope.setTag('mint_click', 'clicked');
-    });
-
-    Sentry.captureEvent({
-      message: 'Mint button click',
-    });
-  }
   const handleClick = async () => {
     try {
-      generateSentryEvent();
       setIsMinting(true);
       if (wallet.connected && candyMachine?.program && wallet.publicKey) {
         const mintTxId = await mintOneToken(
