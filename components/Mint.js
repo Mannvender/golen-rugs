@@ -23,7 +23,7 @@ const Mint = ({ date, dateOptions }) => {
         flexDirection={["column"]}
         alignItems="center"
       >
-        <Heading fontSize={[5,6]} fontWeight={[700]}>
+        <Heading fontSize={[5,6]} fontWeight={[700]} textAlign="center">
           Participate in v1 launch
         </Heading>
         <Heading
