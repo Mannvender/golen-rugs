@@ -10,10 +10,6 @@ export const ROADMAP = [
     when: "Total Supply",
     what: "100",
   },
-  {
-    when: "Launch Date",
-    what: "Less than 4 days",
-  },
 ];
 
 export const MINT_DATE = new Date("2021-09-19T16:00:00.000+00:00");
