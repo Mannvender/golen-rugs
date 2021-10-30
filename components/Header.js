@@ -32,7 +32,7 @@ const Header = () => {
           alignItems="center"
           pl={[3]}
         >
-          <Link href="#" target="_blank" rel="noopener noreferrer">
+          <Link href="https://discord.gg/J37H9GjPk3" target="_blank" rel="noopener noreferrer">
             <SiDiscord fill={colors.light} size="36px" />
           </Link>
         </Flex>

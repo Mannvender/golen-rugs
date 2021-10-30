@@ -81,7 +81,6 @@ const MintSection = ({ ethAddress }) => {
           "singleGossip",
           false
         );
-        console.log(status, "---wallet connected");
 
         if (!status?.err) {
           toast.success("Congratulations! Mint succeeded!");

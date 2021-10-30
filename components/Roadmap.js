@@ -86,8 +86,8 @@ const Roadmap = () => {
             <small> Given below are stats for V1 launch:</small>
           </Heading>
           <Flex mt={[5]} justifyContent="space-between">
-            {ROADMAP.map((step) => (
-              <Flex flexDirection="column" p={[2]}>
+            {ROADMAP.map((step, i) => (
+              <Flex flexDirection="column" p={[2]} key={i}>
                 <Text fontSize={2}>{step.what}</Text>
                 <Heading fontSize={[4]} mt={[3]}>
                   {step.when}
@@ -98,6 +98,12 @@ const Roadmap = () => {
               <Text fontSize={2}>{flags?.launchDate}</Text>
               <Heading fontSize={[4]} mt={[3]}>
                 Launch Date
+              </Heading>
+            </Flex>
+            <Flex flexDirection="column" p={[2]}>
+              <Text fontSize={2}>{flags?.launchTime}</Text>
+              <Heading fontSize={[4]} mt={[3]}>
+                Time
               </Heading>
             </Flex>
           </Flex>

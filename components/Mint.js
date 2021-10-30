@@ -4,7 +4,6 @@ import { useTheme } from "styled-components";
 import dynamic from "next/dynamic";
 import { useFlags } from "@happykit/flags/client";
 import Button from "components/Button";
-import * as Sentry from "@sentry/nextjs";
 const MintSolana = dynamic(() => import("components/mint/MintSolana"), {
   ssr: false,
 });
@@ -13,9 +12,6 @@ const Mint = ({ date, dateOptions }) => {
   const { colors } = useTheme();
   const { flags } = useFlags();
 
-  const handleMintWaitClick = () => {
-    Sentry.captureMessage("Mint wait clicked");
-  };
   return (
     <Box
       marginTop={[5]}
@@ -49,7 +45,7 @@ const Mint = ({ date, dateOptions }) => {
         {flags?.isMintingLive ? (
           <MintSolana date={date} dateOptions={dateOptions} />
         ) : (
-          <Button mt={[3]} onClick={handleMintWaitClick}>
+          <Button mt={[3]} disabled>
             Mint on {flags?.launchDate}
           </Button>
         )}

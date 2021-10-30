@@ -31,7 +31,7 @@ const Banner = (props) => {
         >
           Discover why NFT enthusiasts are gathering up for these rugs.
         </Heading>
-        <Link href="#" target="_blank" rel="noopener noreferrer">
+        <Link href="https://discord.gg/J37H9GjPk3" target="_blank" rel="noopener noreferrer">
           <Button>Join Discord</Button>
         </Link>
       </Flex>
