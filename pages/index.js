@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Flex } from "rebass";
-import { useTheme } from "styled-components";
 
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -11,7 +10,6 @@ import Roadmap from "components/Roadmap";
 import { MINT_DATE, DATE_OPTIONS } from "messages";
 
 const Index = () => {
-  const { colors } = useTheme();
   return (
     <>
       <Box position="relative">

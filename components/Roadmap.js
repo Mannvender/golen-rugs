@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Heading, Card, Text } from "rebass";
-import styled, { useTheme } from "styled-components";
+import { useTheme } from "styled-components";
 import Image from "next/image";
 import { ROADMAP } from "messages";
 

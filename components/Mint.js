@@ -1,8 +1,6 @@
 import React from "react";
 import { Box, Flex, Heading } from "rebass";
-import styled, { useTheme } from "styled-components";
-import Image from "next/image";
-import Button from 'components/Button'
+import { useTheme } from "styled-components";
 import dynamic from "next/dynamic";
 const MintSolana = dynamic(() => import("components/mint/MintSolana"), {
   ssr: false,

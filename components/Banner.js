@@ -1,8 +1,9 @@
 import React from "react";
-import { Box, Flex, Heading } from "rebass";
+import { Flex, Heading } from "rebass";
 import { useTheme } from "styled-components";
 import Image from "next/image";
 import Button from "components/Button";
+import { LinkExternal as Link } from "components/Links";
 
 const Banner = (props) => {
   const { colors } = useTheme();
@@ -30,7 +31,9 @@ const Banner = (props) => {
         >
           Discover why NFT enthusiasts are gathering up for these rugs.
         </Heading>
-        <Button>Join Discord</Button>
+        <Link href="#" target="_blank" rel="noopener noreferrer">
+          <Button>Join Discord</Button>
+        </Link>
       </Flex>
       <Flex flexBasis="100%" sx={{ position: "relative" }}>
         <Image

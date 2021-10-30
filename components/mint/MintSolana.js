@@ -1,15 +1,9 @@
-import { Box, Heading, Flex, Text } from "rebass";
-import { useState, useMemo, useEffect } from "react";
-import styled, { useTheme, css, createGlobalStyle } from "styled-components";
+import { Box, Flex, Text } from "rebass";
+import { useState, useEffect } from "react";
+import styled, { useTheme, css} from "styled-components";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
-import { isMobile } from "react-device-detect";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import Label from "../Label";
-import Input from "../Input";
 import Button from "../Button";
-import { DEFAULT_ERROR_MESSAGE } from "messages";
-import { LinkExternal as Link } from "../Links";
 import { buttonCss } from "components/Button";
 
 import { WalletMultiButton as WalletMultiButtonBase } from "@solana/wallet-adapter-react-ui";
@@ -17,7 +11,6 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import * as anchor from "@project-serum/anchor";
 import {
-  shortenAddress,
   getCandyMachineState,
   mintOneToken,
   awaitTransactionSignatureConfirmation,
