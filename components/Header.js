@@ -22,11 +22,14 @@ const GiPenguin = styled(GiPenguinBase)`
   }
 `;
 const StyledHeader = styled.nav`
-  margin-top: 60px;
+  padding: 40px 16px;
   width: 100%;
   display: flex;
   flex-direction: row;
   backdrop-filter: blur(5px);
+  @media (min-width: 1024px) {
+    padding: 60px 0;
+  }
 `;
 const StyledFlex = styled(Flex)`
   visibility: hidden;
@@ -42,7 +45,7 @@ const Header = () => {
       <StyledHeader>
         <Flex flexBasis="50%">
           <NavLink href="/">
-            <Heading fontSize={[6]}>Golen Rug</Heading>
+            <Heading fontSize={[5, 6]}>Golen Rug</Heading>
           </NavLink>
         </Flex>
         <Flex
@@ -52,7 +55,6 @@ const Header = () => {
           pl={[3]}
         >
           <Link
-            marginRight={[4]}
             href="https://discord.gg/vr74bMDa"
             target="_blank"
             rel="noopener noreferrer"

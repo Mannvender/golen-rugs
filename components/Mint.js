@@ -25,16 +25,17 @@ const Mint = ({ date, dateOptions }) => {
         flexDirection={["column"]}
         alignItems="center"
       >
-        <Heading fontSize={[6]} fontWeight={[700]}>
+        <Heading fontSize={[5,6]} fontWeight={[700]}>
           Participate in v1 launch
         </Heading>
         <Heading
-          fontSize={[5]}
+          fontSize={[4,5]}
           fontWeight={[700]}
           color={colors.light1}
           textAlign="center"
           maxWidth={["600px"]}
           mt={[4]}
+          px={[4,0]}
         >
           Don't miss out any update from us. Join our discord server and get your daily dose of rugs.
         </Heading>

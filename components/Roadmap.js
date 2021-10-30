@@ -13,17 +13,19 @@ const Roadmap = () => {
         margin={["0 auto"]}
         flexDirection={["row"]}
         justifyContent="space-between"
+        flexWrap="wrap"
       >
-        <Flex flexBasis="40%" sx={{ position: "relative" }}>
+        <Flex flexBasis={["100%","40%"]} sx={{ position: "relative" }}>
           <Card
-            width={[256, 340]}
+            width={['85%', 340]}
             mx="auto"
             sx={{
               overflow: "hidden",
               borderRadius: "12px",
               border: `2px solid ${colors.light1}`,
             }}
-            ml={[0]}
+            mb={[4,0]}
+            // ml={[0]}
           >
             <Box sx={{ position: "relative" }} height="300px">
               <Image src="/rug_01.png" alt="sample rug" layout="fill" quality={70} />
@@ -64,11 +66,11 @@ const Roadmap = () => {
             </Box>
           </Card>
         </Flex>
-        <Flex flexBasis={["50%"]} flexDirection="column">
-          <Heading fontSize={[6]} fontWeight={[700]} marginBottom={[3]}>
+        <Flex flexBasis={["100%","50%"]} flexDirection="column" px={[4,0]}>
+          <Heading fontSize={[5,6]} fontWeight={[700]} marginBottom={[3]}>
             Insanely low waiting time
           </Heading>
-          <Heading fontSize={[5]} fontWeight={[400]} color={colors.light1}>
+          <Heading fontSize={[4,5]} fontWeight={[400]} color={colors.light1}>
             With an average release in less than 4 days, Golen Rugs are shifting
             the balance of power back to NFT enthusiasts.
             <br />

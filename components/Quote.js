@@ -21,11 +21,14 @@ const Quote = () => {
         margin={["0 auto"]}
         flexDirection={["row"]}
         alignItems="center"
+        justifyContent="center"
+        flexWrap="wrap"
       >
         <Box
           sx={{ borderRadius: "50%", overflow: "hidden", position: "relative" }}
           height="209px"
           width="209px"
+          mb={[3,0]}
         >
           <Image
             src={`/bender.png`}
@@ -35,11 +38,11 @@ const Quote = () => {
             quality="70"
           />
         </Box>
-        <Box flexBasis="70%" marginLeft={[5]}>
-          <Heading fontSize={[5]} fontWeight={[700]}>
+        <Box flexBasis={["100%","70%"]} marginLeft={[0,5]} px={[4,0]}>
+          <Heading fontSize={[4,5]} fontWeight={[700]}>
             “People ask me where's the D in Golden. Check in your wallet or something might find it there.”
           </Heading>
-          <Heading fontSize={[5]} fontWeight={[700]} marginTop={[3]}>
+          <Heading fontSize={[4,5]} fontWeight={[700]} marginTop={[3]}>
             Bender, <StyledSpan>Rug Inspector</StyledSpan>
           </Heading>
         </Box>
